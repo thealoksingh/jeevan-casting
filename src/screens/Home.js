@@ -133,15 +133,6 @@ function Home() {
             ))}
           </div>
 
-          {/* CLIENTS */}
-          {/* <div className="my-10">
-            <BouncyText
-              text="Our Clients"
-              className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
-            />
-          </div> */}
-
-        
           {/* PROJECT TITLE */}
           <div className="my-10">
             <BouncyText
@@ -195,13 +186,18 @@ function Home() {
                 Empowering industries to operate smarter, safer, and more
                 efficiently.
               </p>
-               <div className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition">
+              <div className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition">
                 View Project
               </div>
             </div>
           </div>
-            <OrbitReels />
-
+          <div className="my-10">
+            <BouncyText
+              text="Gallery"
+              className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
+            />
+          </div>
+          <OrbitReels />
         </div>
       </section>
 

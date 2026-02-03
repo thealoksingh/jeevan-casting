@@ -3,18 +3,66 @@ import Footer from "../components/Footer";
 import HexagonGridBgContactus from "../components/backgrounds/HexagonGridBgContactus";
 import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
 import emailjs from "@emailjs/browser";
-import { emailKeys } from "../keys/key";
+import { emailKeys, websiteConfig, validationRegex } from "../keys/key";
 import { LottieAlert } from "../components/lottie/LottieAlert";
 
 function ContactUs() {
   const [showSuccessAlert, setShowSuccessAlert] = useState(false);
   const [showFailureAlert, setShowFailureAlert] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({
+    name: "",
+    phone: "",
+    message: ""
+  });
   const form = useRef();
 
+  const validateForm = () => {
+    const newErrors = {};
+    const formData = new FormData(form.current);
+    
+    const name = formData.get('user_name')?.trim();
+    const phone = formData.get('user_phone')?.trim();
+    const message = formData.get('message')?.trim();
+    
+    if (!name) newErrors.name = "Name is required";
+    else if (!validationRegex.name.test(name)) newErrors.name = "Name should be 2-50 characters, letters only";
+    
+    if (!phone) newErrors.phone = "Phone is required";
+    else if (!validationRegex.phone.test(phone)) newErrors.phone = "Invalid phone number format";
+    
+    if (!message) newErrors.message = "Message is required";
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const sendEmail = (e) => {
-    setLoading(true);
     e.preventDefault();
+    
+    if (!validateForm()) return;
+    
+    const formData = new FormData(form.current);
+    const payload = {
+      logo_url: websiteConfig.logo_url,
+      web_name: websiteConfig.web_name,
+      web_url: websiteConfig.web_url,
+      user_name: formData.get('user_name'),
+      user_email: formData.get('user_email') || 'Not provided',
+      user_phone: formData.get('user_phone'),
+      user_gender: 'Not provided',
+      user_height: 'Not provided',
+      user_age: 'Not provided',
+      user_weight: 'Not provided',
+      user_location: 'Not provided',
+      user_intro_url: 'Not provided',
+      user_social_url: 'Not provided',
+      message: formData.get('message')
+    };
+    
+    console.log('Contact Form Payload:', payload);
+    
+    setLoading(true);
     emailjs
       .sendForm(emailKeys.serviceId, emailKeys.templateId, form.current, {
         publicKey: emailKeys.publicKey,
@@ -24,13 +72,14 @@ function ContactUs() {
           setShowSuccessAlert(true);
           console.log("Message sent successfully!");
           form.current.reset();
+          setErrors({});
           setLoading(false);
         },
         (error) => {
           setLoading(false);
           setShowFailureAlert(true);
           console.log(" Failed to send: " + error.text);
-        }
+        },
       );
   };
 
@@ -55,19 +104,21 @@ function ContactUs() {
                   required
                   className="w-full placeholder:text-white p-3 rounded-sm bg-black/50 border border-gray-700 focus:border-[var(--brand-secondary)] outline-none text-white"
                 />
+                {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
                 <input
                   type="email"
                   name="user_email"
-                  placeholder="Email"
-                  required
+                  placeholder="Email (Optional)"
                   className="w-full p-3 placeholder:text-white rounded-sm bg-black/50 border border-gray-700 focus:border-[var(--brand-secondary)] outline-none text-white"
                 />
                 <input
                   type="tel"
                   name="user_phone"
                   placeholder="Mobile Number"
+                  required
                   className="w-full p-3 rounded-sm placeholder:text-white bg-black/50 border border-gray-700 focus:border-[var(--brand-secondary)] outline-none text-white"
                 />
+                {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
                 <textarea
                   name="message"
                   placeholder="Your Message"
@@ -75,6 +126,7 @@ function ContactUs() {
                   required
                   className="w-full p-3 rounded-sm bg-black/50 border border-gray-700 focus:border-[var(--brand-secondary)] outline-none resize-none text-white"
                 ></textarea>
+                {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
                 {loading ? (
                   <div className="w-full flex items-center justify-center gap-2 p-3 rounded-sm bg-[var(--brand-secondary)] text-black font-semibold shadow-md cursor-not-allowed">
                     <svg
@@ -111,30 +163,33 @@ function ContactUs() {
             </div>
 
             {/* Right side text */}
-            
-<div className="flex flex-col justify-center p-8 bg-black/40 rounded-sm shadow-[0_0_25px_rgba(var(--brand-accent-rgb),0.219)] backdrop-blur-md border border-gray-700">
-  <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)] bg-clip-text text-transparent">
-    Let’s Bring Your Vision to Screen
-  </h3>
 
-  <p className="text-gray-300 leading-relaxed">
-    At <span className="text-white font-semibold">Jeevan Casting</span>, we connect 
-    exceptional talent with powerful stories. Whether you're a filmmaker searching 
-    for the perfect face or an artist ready to step into the spotlight, our team is 
-    here to guide you every step of the way.
-  </p>
+            <div className="flex flex-col justify-center p-8 bg-black/40 rounded-sm shadow-[0_0_25px_rgba(var(--brand-accent-rgb),0.219)] backdrop-blur-md border border-gray-700">
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[var(--brand-secondary)] to-[var(--brand-accent)] bg-clip-text text-transparent">
+                Let’s Bring Your Vision to Screen
+              </h3>
 
-  <p className="mt-4 text-gray-300 leading-relaxed">
-    With deep industry insight and a passion for discovering fresh talent, we make 
-    casting seamless, professional, and inspiring — because the right cast doesn’t 
-    just fill roles, it brings stories to life.
-  </p>
+              <p className="text-gray-300 leading-relaxed">
+                At{" "}
+                <span className="text-white font-semibold">Jeevan Casting</span>
+                , we connect exceptional talent with powerful stories. Whether
+                you're a filmmaker searching for the perfect face or an artist
+                ready to step into the spotlight, our team is here to guide you
+                every step of the way.
+              </p>
 
-  <p className="mt-5 text-gray-400 italic">
-    "Great films begin with great casting — let’s create something unforgettable."
-  </p>
-</div>
+              <p className="mt-4 text-gray-300 leading-relaxed">
+                With deep industry insight and a passion for discovering fresh
+                talent, we make casting seamless, professional, and inspiring —
+                because the right cast doesn’t just fill roles, it brings
+                stories to life.
+              </p>
 
+              <p className="mt-5 text-gray-400 italic">
+                "Great films begin with great casting — let’s create something
+                unforgettable."
+              </p>
+            </div>
           </div>
         </div>
       </section>

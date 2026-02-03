@@ -102,12 +102,12 @@ const OrbitReels = () => {
     <div
    
       style={{
-          //  backgroundImage: "url('./middleCamera.png')",
-          //     backgroundSize: "contain",
-          //     backgroundPosition: "center",
-          //     backgroundRepeat: "no-repeat",
-          //     backgroundBlendMode: "multiply",
-          //     backgroundColor: "#0000004c", // important for multiply
+           backgroundImage: "url('./middleCamera.png')",
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundBlendMode: "multiply",
+              backgroundColor: "#00000029", // important for multiply
               
         width: "500px",
         height: "400px",

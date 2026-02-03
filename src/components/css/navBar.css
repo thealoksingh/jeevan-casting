@@ -125,10 +125,14 @@
 .mobile-menu ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 .mobile-menu li {
-  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border: 0.4px solid ;
+  border-color: rgba(49, 49, 49, 0.866);
+  text-align: center;
 }
 
 .mobile-submenu {
@@ -140,7 +144,13 @@
 }
 
 .close-btn {
-  display: none;
+  background: none;
+  border: none;
+  color: var(--neutral-bg-light);
+  display: block;
+  margin-left: auto;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 /* Overlay */

@@ -16,7 +16,7 @@ function HoverFlipCard({
       transition={{
         duration: 0.7,
         ease: "easeOut",
-        delay: index * 0.15,
+        delay: index * 0.1,
       }}
       viewport={{ once: true }}
       style={{ perspective: "1400px" }}

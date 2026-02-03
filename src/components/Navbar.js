@@ -23,7 +23,15 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isContactModalOpen, setContactModalOpen] = useState(false);
-  const toggleNavbar = () => setIsOpen(!isOpen);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  };
 
   return (
     <>
@@ -87,6 +95,9 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="mobile-menu open">
+          <button className="close-btn" onClick={toggleNavbar}>
+            <XMarkIcon className="h-6 w-6" />
+          </button>
           <ul>
             {navLinks.map((link, idx) => (
               <li key={idx}>
@@ -98,7 +109,7 @@ const Navbar = () => {
                   {link.name}
                 </NavLink>
                 {link.subPaths && (
-                  <ul className="mobile-submenu">
+                  <ul className="mobile-submenu ">
                     {link.subPaths.map((sub, subIdx) => (
                       <li key={subIdx}>
                         <NavLink

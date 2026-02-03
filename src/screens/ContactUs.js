@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import HexagonGridBgContactus from "../components/backgrounds/HexagonGridBgContactus";
 import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
 import emailjs from "@emailjs/browser";
-import { emailKeys, websiteConfig, validationRegex } from "../keys/key";
+import { emailKeys, validationRegex } from "../keys/key";
 import { LottieAlert } from "../components/lottie/LottieAlert";
 
 function ContactUs() {
@@ -44,12 +44,9 @@ function ContactUs() {
     
     const formData = new FormData(form.current);
     const payload = {
-      logo_url: websiteConfig.logo_url,
-      web_name: websiteConfig.web_name,
-      web_url: websiteConfig.web_url,
-      user_name: formData.get('user_name'),
-      user_email: formData.get('user_email') || 'Not provided',
-      user_phone: formData.get('user_phone'),
+      user_name: formData.get('user_name')|| 'Not Available',
+      user_email: formData.get('user_email') || 'Not Available',
+      user_phone: formData.get('user_phone')|| 'Not Available',
       user_gender: 'Not provided',
       user_height: 'Not provided',
       user_age: 'Not provided',
@@ -70,7 +67,7 @@ function ContactUs() {
       .then(
         () => {
           setShowSuccessAlert(true);
-          console.log("Message sent successfully!");
+          console.log("Message Sent successfully!");
           form.current.reset();
           setErrors({});
           setLoading(false);
@@ -199,7 +196,7 @@ function ContactUs() {
       {showSuccessAlert && (
         <LottieAlert
           type="success"
-          message="Message submitted successfully 🎉"
+          message="Message Sent successfully 🎉"
           onClose={() => setShowSuccessAlert(false)}
           autoClose={true}
           loop={false}

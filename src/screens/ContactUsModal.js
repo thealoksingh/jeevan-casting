@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { emailKeys, websiteConfig, validationRegex } from "../keys/key";
+import { emailKeys,validationRegex } from "../keys/key";
 import { LottieAlert } from "../components/lottie/LottieAlert";
 
 function ContactUsModal({ isOpen, onClose }) {
@@ -77,18 +77,15 @@ function ContactUsModal({ isOpen, onClose }) {
     
     const formData = new FormData(form.current);
     const payload = {
-      logo_url: websiteConfig.logo_url,
-      web_name: websiteConfig.web_name,
-      web_url: websiteConfig.web_url,
-      user_name: formData.get('user_name'),
+      user_name: formData.get('user_name')|| 'Not Available',
       user_email: formData.get('user_email') || 'Not provided',
-      user_phone: formData.get('user_phone'),
-      user_gender: formData.get('user_gender'),
-      user_height: formData.get('user_height'),
-      user_age: formData.get('user_age'),
-      user_weight: formData.get('user_weight'),
-      user_location: formData.get('user_location'),
-      user_intro_url: formData.get('user_intro_url'),
+      user_phone: formData.get('user_phone')|| 'Not Available',
+      user_gender: formData.get('user_gender')|| 'Not Available',
+      user_height: formData.get('user_height')|| 'Not Available',
+      user_age: formData.get('user_age')|| 'Not Available',
+      user_weight: formData.get('user_weight')||'Not Available',
+      user_location: formData.get('user_location')||'Not Available',
+      user_intro_url: formData.get('user_intro_url')||'Not Available',
       user_social_url: formData.get('user_social_url') || 'Not provided',
       message: formData.get('message')|| 'Not provided',
     };
@@ -102,7 +99,7 @@ function ContactUsModal({ isOpen, onClose }) {
       })
       .then(
         () => {
-          console.log("Message sent successfully!");
+          console.log("Your Profile Submitted Successfully!");
           form.current.reset();
           setErrors({});
           setLoading(false);
@@ -313,7 +310,7 @@ function ContactUsModal({ isOpen, onClose }) {
         {showSuccessAlert && (
           <LottieAlert
             type="success"
-            message="Message submitted successfully 🎉"
+            message="Your Profile Submitted successfully 🎉"
             onClose={() => setShowSuccessAlert(false)}
             autoClose={true}
             loop={false}

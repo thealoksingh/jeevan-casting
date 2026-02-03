@@ -102,8 +102,8 @@ const OrbitReels = () => {
     <div
       style={{
         width: "500px",
-        height: "500px",
-        margin: "auto",
+        height: "400px",
+        margin: "0 auto",
         perspective: "1200px",
       }}
     >

@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  transform-style: preserve-3d;
+}
 
 body {
   margin: 0;

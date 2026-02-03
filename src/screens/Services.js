@@ -33,7 +33,8 @@ function Services() {
           />
           <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             From talent discovery to production support, we provide
-            comprehensive casting solutions for Bollywood, regional cinema, and digital content.
+            comprehensive casting solutions for Bollywood, regional cinema, and
+            digital content.
           </p>
         </div>
       </div>
@@ -44,25 +45,35 @@ function Services() {
         <div className="absolute inset-0 z-10 backdrop-blur-md"></div>
         <div className="relative z-20 w-full max-w-7xl mx-auto px-6 py-16 text-white">
           {/* Services Carousel */}
-          <div className="py-16  ">
+          <div className="py-10  ">
             <div className="max-w-6xl mx-auto mb-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Casting Solutions</h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
+       
+              <p className="text-gray-300 max-w-8xl mx-auto">
+                Jeevan Casting is dedicated to connecting exceptional talent
+                with the right opportunities in film, television, web series,
+                and advertising. We act as a bridge between aspiring actors and
+                visionary directors, ensuring every project finds the perfect
+                cast. Our team carefully analyzes talent through auditions,
+                screen tests, and profile evaluations, focusing on performance,
+                versatility, and on-screen presence. By understanding both the
+                creative vision of directors and the strengths of artists, we
+                streamline the casting process and save valuable production
+                time. Whether launching fresh faces or sourcing experienced
+                performers, we are committed to building meaningful
+                collaborations that bring stories to life.
+              </p>
+
+               <p className="text-gray-300 max-w-2xl mx-auto">
                 Explore our comprehensive range of casting services
                 designed to bring your creative vision to life.
               </p>
             </div>
-            <ServicesCarousel1 />
           </div>
-          <div className=" text-center">
-          <BouncyText
-            text="Our Expertise"
-            className="text-4xl sm:text-4xl md:text-5xl text-white font-extrabold leading-tight mb-4"
-          />
-          </div>
+
           <Portfolio />
           {/* Value Proposition */}
-          <div className="py-16">
+          <div className="py-4">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {[
                 {
@@ -116,14 +127,20 @@ function Services() {
             Looking for the Perfect Cast?
           </h2>
           <p className="text-xl text-white mb-8">
-            Discover our casting services or connect with us for a customized casting solution
-            tailored to your project needs.
+            Discover our casting services or connect with us for a customized
+            casting solution tailored to your project needs.
           </p>
-           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/about" className="px-8 py-2 bg-[var(--brand-secondary)] hover:bg-[var(--brand-secondary)]/80 text-[var(--brand-primary)] font-semibold rounded-sm transition transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/about"
+              className="px-8 py-2 bg-[var(--brand-secondary)] hover:bg-[var(--brand-secondary)]/80 text-[var(--brand-primary)] font-semibold rounded-sm transition transform hover:scale-105"
+            >
               About Us
             </a>
-            <a href="/contact" className="px-8 py-2 bg-transparent border-2 border-[var(--brand-secondary)] text-[var(--brand-secondary)] hover:bg-[var(--brand-secondary)] hover:text-[var(--brand-primary)] font-semibold rounded-sm transition-all">
+            <a
+              href="/contact"
+              className="px-8 py-2 bg-transparent border-2 border-[var(--brand-secondary)] text-[var(--brand-secondary)] hover:bg-[var(--brand-secondary)] hover:text-[var(--brand-primary)] font-semibold rounded-sm transition-all"
+            >
               Contact Us
             </a>
           </div>

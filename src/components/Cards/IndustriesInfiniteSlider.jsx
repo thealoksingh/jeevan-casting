@@ -31,7 +31,7 @@ export default function IndustriesInfiniteSlider() {
   const repeatedIndustries = [...industries, ...industries];
 
   return (
-    <div className="py-16 bg-[var(--card-background)] overflow-hidden">
+    <div className="py-16 bg-black/20 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-white text-center mb-12">
           Platforms We Cast For

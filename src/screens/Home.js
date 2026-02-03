@@ -13,6 +13,7 @@ import FlippingCardCarousel from "../components/Cards/FlippingCardCarousel";
 import MiniReelCard from "../components/Cards/MiniReelCard";
 import MyHighlight from "../components/MyHighlight";
 import OrbitReels from "../components/OrbitReels";
+import ServicesCarousel1 from "../components/Cards/ServicesCarousel1";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -118,87 +119,90 @@ function Home() {
 
         <div className="relative z-20 text-white text-center w-full">
           <MyHighlight />
-        <div className="max-w-8xl mx-auto sm:px-6 lg:px-16 pb-16">
-          {/* MEET US */}
-          <div className="my-10">
-            <BouncyText
-              text="Meets us"
-              className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
-            />
-          </div>
+          <div className="max-w-8xl mx-auto sm:px-6 lg:px-16 pb-16">
+            {/* MEET US */}
+            <div className="my-10">
+              <BouncyText
+                text="Who We are??"
+                className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
+              />
+            </div>
+            <ServicesCarousel1 />
+             <div className="my-10">
+              <BouncyText
+                text="Stars We Wroked With"
+                className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
+              />
+            </div>
+            <FlippingCardCarousel />
 
-          <div className="flex flex-wrap gap-6 justify-center mt-8 lg:mt-16">
-            {services.map((s, idx) => (
-              <HoverFlipCard key={idx} index={idx} {...s} />
-            ))}
-          </div>
-
-          {/* PROJECT TITLE */}
-          <div className="my-10">
-            <BouncyText
-              text="A Quick Glimpse of Our Work"
-              className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
-            />
-          </div>
-
-          {/* PROJECT 1 */}
-          <div className="mt-12 flex flex-col lg:flex-row items-center gap-12 mx-auto">
-            <div className="w-full lg:w-1/2 flex justify-center">
-              <ProjectImages />
+            {/* PROJECT TITLE */}
+            <div className="my-10">
+              <BouncyText
+                text="A Quick Glimpse of Our Work"
+                className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
+              />
             </div>
 
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-xl sm:text-2xl font-bold text-white">
-                Title of the Project
-              </h1>
+            {/* PROJECT 1 */}
+            <div className="mt-12 flex flex-col lg:flex-row items-center gap-12 mx-auto">
+              <div className="w-full lg:w-1/2 flex justify-center">
+                <ProjectImages />
+              </div>
 
-              <p className="mt-2 text-gray-400 text-sm">Date: 2024-25</p>
+              <div className="w-full lg:w-1/2 text-center lg:text-left">
+                <h1 className="text-xl sm:text-2xl font-bold text-white">
+                  Title of the Project
+                </h1>
 
-              <p className="mt-5 text-sm sm:text-base text-slate-300 break-words">
-                Empowering industries to operate smarter, safer, and more
-                efficiently.{" "}
-                <span className="text-white font-semibold">
-                  Combining technology, creativity,
-                </span>{" "}
-                and <span className="text-white font-semibold">expertise,</span>{" "}
-                we drive the future of industrial digitalization.
-              </p>
-              <div className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition">
-                View Project
+                <p className="mt-2 text-gray-400 text-sm">Date: 2024-25</p>
+
+                <p className="mt-5 text-sm sm:text-base text-slate-300 break-words">
+                  Empowering industries to operate smarter, safer, and more
+                  efficiently.{" "}
+                  <span className="text-white font-semibold">
+                    Combining technology, creativity,
+                  </span>{" "}
+                  and{" "}
+                  <span className="text-white font-semibold">expertise,</span>{" "}
+                  we drive the future of industrial digitalization.
+                </p>
+                <div className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition">
+                  View Project
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* PROJECT 2 */}
-          <div className="mt-16 flex flex-col lg:flex-row-reverse  items-center gap-12 mx-auto mb-10">
-            <div className="w-full lg:w-1/2 flex justify-center">
-              <ProjectImages />
-            </div>
+            {/* PROJECT 2 */}
+            <div className="mt-16 flex flex-col lg:flex-row-reverse  items-center gap-12 mx-auto mb-10">
+              <div className="w-full lg:w-1/2 flex justify-center">
+                <ProjectImages />
+              </div>
 
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-xl sm:text-2xl font-bold text-white">
-                Title of the Project
-              </h1>
+              <div className="w-full lg:w-1/2 text-center lg:text-left">
+                <h1 className="text-xl sm:text-2xl font-bold text-white">
+                  Title of the Project
+                </h1>
 
-              <p className="mt-2 text-gray-400 text-sm">Date: 2024-25</p>
+                <p className="mt-2 text-gray-400 text-sm">Date: 2024-25</p>
 
-              <p className="mt-5 text-sm sm:text-base text-slate-300 break-words">
-                Empowering industries to operate smarter, safer, and more
-                efficiently.
-              </p>
-              <div className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition">
-                View Project
+                <p className="mt-5 text-sm sm:text-base text-slate-300 break-words">
+                  Empowering industries to operate smarter, safer, and more
+                  efficiently.
+                </p>
+                <div className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition">
+                  View Project
+                </div>
               </div>
             </div>
-          </div>
-          {/* <div className="my-10">
+            {/* <div className="my-10">
             <BouncyText
               text="Gallery"
               className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
             />
           </div> */}
-          <OrbitReels />
-        </div>
+            <OrbitReels />
+          </div>
         </div>
       </section>
 

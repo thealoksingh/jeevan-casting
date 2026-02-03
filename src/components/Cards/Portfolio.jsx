@@ -52,7 +52,7 @@ const Single = ({ item, index }) => {
   const isOdd = index % 2 != 0;
 
   return (
-    <section className="h-auto md:h-[80vh] flex items-center justify-center px-4 py-10 md:py-0">
+    <section className="h-auto md:h-[80vh] flex items-center justify-center px-4 py-4 md:py-0">
       <div
         className={`flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1366px] w-full ${
           !isOdd ? "md:flex-row-reverse" : ""
@@ -153,7 +153,7 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio relative" ref={ref}>
-      <div className="max-w-6xl mx-auto py-16">
+      <div className="max-w-6xl mx-auto py-10">
         {services.map((item, idx) => (
           <Single key={idx} item={item} index={idx} />
         ))}

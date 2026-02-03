@@ -72,7 +72,7 @@ function HexagonGridBgAbout() {
              onClick={() => setOpen(true)}
             className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition"
                   >
-              Contact Us
+             Join Us 
             </button>
           </div>
         </div>

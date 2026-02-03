@@ -15,7 +15,7 @@ function HoverFlipCard({index}) {
       className="group mt-16 w-full max-w-[20rem] relative h-[28rem] [perspective:1000px] "
     >
        <div
-        className="absolute w-full h-full flex flex-col items-center justify-center px-4 transition-transform duration-700 [backface-visibility:hidden] [transform:rotateY(0deg)] group-hover:[transform:rotateY(180deg)] rounded-xl border border-white/10 backdrop-blur-xl shadow-[var(--shadow-glow)] bg-[var(--card-background)] "
+        className="absolute w-full h-full flex flex-col items-center justify-center px-4 transition-transform duration-700 [backface-visibility:hidden] [transform:rotateY(0deg)] group-hover:[transform:rotateY(180deg)] rounded-sm border border-white/10 backdrop-blur-xl shadow-[var(--shadow-glow)] bg-black "
       >
          <div className="absolute -top-16 left-1/2 -translate-x-1/2 border-2 border-white rounded-full overflow-hidden">
           <div className="w-32 h-32 bg-[var(--brand-secondary)] rounded-full shadow-lg overflow-hidden ring-4 ring-[var(--card-background)]">
@@ -39,7 +39,7 @@ function HoverFlipCard({index}) {
       </div>
 
       <div
-        className="absolute w-full h-full flex flex-col items-center justify-center px-6 text-center transition-transform duration-700 [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)] rounded-xl border border-white/10 backdrop-blur-xl shadow-[var(--shadow-glow)] hover:shadow-[0_0_80px_rgba(239,1,99,0.2)] transition-shadow duration-300 bg-[var(--card-background)]"
+        className="absolute w-full h-full flex flex-col items-center justify-center px-6 text-center transition-transform duration-700 [backface-visibility:hidden] [transform:rotateY(-180deg)] group-hover:[transform:rotateY(0deg)] rounded-sm border border-white/10 backdrop-blur-xl shadow-[var(--shadow-glow)] hover:shadow-[0_0_80px_rgba(239,1,99,0.2)] transition-shadow duration-300 bg-[var(--card-background)]"
       >
         <h2 className="text-2xl font-bold text-white">Back Side</h2>
         <p className="mt-3 text-sm text-slate-300 leading-relaxed">

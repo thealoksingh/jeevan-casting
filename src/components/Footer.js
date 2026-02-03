@@ -9,10 +9,10 @@ function Footer() {
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center  ">
               <img src={logo} alt="Logo" className="w-8 h-8 rounded-full" />
             </div>
-            <h2 className="text-xl font-bold tracking-wide">Curves & Codes</h2>
+            <h2 className="text-xl font-bold tracking-wide">Jeevan Casting</h2>
           </div>
           <p className="text-sm text-neutral-400">
-            At Curves & Codes, we deliver innovative technology solutions—from
+            At Jeevan Casting, we deliver innovative technology solutions—from
             AI analytics and intelligent surveillance to IT infrastructure and
             custom digital applications.
           </p>
@@ -49,7 +49,7 @@ function Footer() {
       </div>
       <div className="mt-10 border-t border-white/10 py-4">
         <p className="text-center text-xs text-neutral-400">
-          © {new Date().getFullYear()} Curves & Codes. All rights reserved.
+          © {new Date().getFullYear()} Jeevan Casting. All rights reserved.
         </p>
       </div>
     </footer>

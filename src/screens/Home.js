@@ -39,22 +39,7 @@ function Home() {
       backText:
         "Using cutting-edge technologies like React, Next.js, Spring Boot, and cloud-native systems, we create applications that are not just functional but future-ready. Our solutions are designed to handle scale, performance, and reliability while keeping user experience at the core.",
     },
-    {
-      image: insta,
-      title: "Web & App Development",
-      description:
-        "We build powerful, modern, and scalable applications that deliver seamless experiences across web and mobile platforms.",
-      backText:
-        "Using cutting-edge technologies like React, Next.js, Spring Boot, and cloud-native systems, we create applications that are not just functional but future-ready. Our solutions are designed to handle scale, performance, and reliability while keeping user experience at the core.",
-    },
-    {
-      image: insta,
-      title: "Web & App Development",
-      description:
-        "We build powerful, modern, and scalable applications that deliver seamless experiences across web and mobile platforms.",
-      backText:
-        "Using cutting-edge technologies like React, Next.js, Spring Boot, and cloud-native systems, we create applications that are not just functional but future-ready. Our solutions are designed to handle scale, performance, and reliability while keeping user experience at the core.",
-    },
+   
   ];
 
   const clients = [
@@ -113,19 +98,13 @@ function Home() {
               Powering Industry 4.0 with Smart, Secure Solutions
             </h1>
             <p className="mt-2 text-[var(--neutral-gray)] text-base md:text-lg">
-              by <span className="text-white/90">Curves & Codes</span> — Vision
+              by <span className="text-white/90">Jeevan Casting</span> — Vision
               AI • Surveillance • Smart Infrastructure • SmartOps
             </p>
             <p className="mt-4 text-xl md:text-2xl font-semibold text-[var(--brand-secondary)]">
               Integrated systems that drive{" "}
-              <span className="text-[var(--brand-accent)]">
-                security, efficiency,
-              </span>{" "}
-              and{" "}
-              <span className="text-[var(--brand-accent)]">
-                real-time insights
-              </span>
-              .
+              <span className="text-white">security, efficiency,</span> and{" "}
+              <span className="text-white">real-time insights</span>.
             </p>
             <p className="mt-5 text-sm md:text-base text-slate-300/90 max-w-2xl">
               We design and deploy{" "}
@@ -142,16 +121,16 @@ function Home() {
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <button
                 onClick={() => setOpen(true)}
-                className="inline-flex items-center justify-center rounded-2xl px-5 py-3 bg-[var(--brand-accent)] text-white font-semibold shadow hover:opacity-90 transition"
+                className="inline-flex items-center justify-center rounded-sm px-6 py-3 bg-[var(--brand-secondary)] text-black font-semibold shadow hover:opacity-90 transition"
               >
                 Request a Proposal
               </button>
-              {/* <a
+              <a
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-white/20 text-white hover:bg-white/5 transition"
               >
                 Book a 15-min Discovery Call
-              </a> */}
+              </a>
             </div>
           </div>
         </div>
@@ -164,27 +143,29 @@ function Home() {
         <AnimatedCanvas />
         <div className="absolute inset-0 z-10 backdrop-blur-md"></div>
         <div className="relative z-20 text-white text-center">
-          {/* <div className="flex flex-wrap gap-6 justify-center lg:mt-16 mt-8">
-            {services.map((s, idx) => (
-              <HoverFlipCard key={idx} index={idx} {...s} />
-            ))}
-          </div> */}
-          {/* <div className="m-10">
+           <div className="m-10">
             <BouncyText
               text={`Meets us`}
               className="text-2xl sm:text-4xl md:text-5xl text-white  px-4 mt-3 font-extrabold leading-tight text-center  "
             />
-          </div> */}
-          <FlippingCardCarousel services={services} />
-          <div className="m-10">
+          </div>
+          <div className="flex flex-wrap gap-6 justify-center lg:mt-16 mt-8">
+            {services.map((s, idx) => (
+              <HoverFlipCard key={idx} index={idx} {...s} />
+            ))}
+          </div>
+         
+             <div className="m-10">
             <BouncyText
               text={`Our Clients`}
               className="text-2xl sm:text-4xl md:text-5xl text-white  px-4 mt-3 font-extrabold leading-tight text-center  "
             />
           </div>
           <div className="overflow-hidden max-w-full py-10">
-           <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused]" style={{width: 'max-content'}}>
-
+            <div
+              className="flex gap-6 animate-marquee hover:[animation-play-state:paused]"
+              style={{ width: "max-content" }}
+            >
               {/* ORIGINAL */}
               {clients.map((client, idx) => (
                 <MiniReelCard
@@ -238,7 +219,7 @@ function Home() {
                 </p>
                 <a
                   href="#"
-                  className="group mt-4 inline-flex items-center gap-2 rounded-xl px-5 py-2 bg-[#ef0163] text-white font-semibold hover:translate-y-[-1px] hover:shadow-[0_10px_30px_rgba(239,1,99,0.35)] transition"
+                  className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition"
                 >
                   View Project
                   <svg
@@ -285,7 +266,7 @@ function Home() {
                 </p>
                 <a
                   href="#"
-                  className="group mt-4 inline-flex items-center gap-2 rounded-xl px-5 py-2 bg-[#ef0163] text-white font-semibold hover:translate-y-[-1px] hover:shadow-[0_10px_30px_rgba(239,1,99,0.35)] transition"
+                  className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition"
                 >
                   View Project
                   <svg

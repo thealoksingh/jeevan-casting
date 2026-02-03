@@ -55,10 +55,11 @@ const Navbar = () => {
         </ul>
         <button
           onClick={() => setContactModalOpen(true)}
-          className="hidden md:inline-flex group items-center gap-2 rounded-xl px-5 py-2 
+          className="hidden md:inline-flex group items-center gap-2 rounded-sm px-5 py-2 
              border border-brand-secondary-hover 
-             text-brand-secondary 
+             text-black
              hover:bg-brand-secondary-hover 
+            bg-brand-secondary
              shadow-glow transition"
         >
           Get in Touch

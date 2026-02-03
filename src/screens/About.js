@@ -82,7 +82,7 @@ function About() {
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
               At{" "}
               <span className="font-semibold text-pink-400">
-                Curves & Codes (C&C)
+                Jeevan Casting (C&C)
               </span>
               , technology isn’t just about systems. it’s about
               <span className="text-cyan-300 font-semibold">

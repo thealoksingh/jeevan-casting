@@ -8,7 +8,7 @@ const ProjectImages = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
       viewport={{ once: true }}
-      className="w-full flex justify-center items-center overflow-hidden "
+      className="w-full flex justify-center items-center overflow-hidden"
     >
       {/* SCALE WRAPPER */}
       <div
@@ -26,17 +26,15 @@ const ProjectImages = () => {
         <div className="relative w-[900px] h-[520px] mx-auto">
           {/* Main Image */}
           <div
-            className="absolute top-1/2 left-1/2 
-                       -translate-x-1/2 -translate-y-1/2
-                        border-2 z-20
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                       border border-[var(--brand-secondary)] z-20
                        w-[420px] h-[260px]"
             style={{
-              borderColor: "var(--brand-secondary)",
               boxShadow: "var(--shadow-glow-secondary)",
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1515634928627-2a4e0dae3ddf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1515634928627-2a4e0dae3ddf?q=80&w=1170&auto=format&fit=crop"
               alt="Main Project"
               loading="lazy"
               decoding="async"
@@ -51,10 +49,9 @@ const ProjectImages = () => {
           {/* Top Left */}
           <div
             className="absolute top-[70px] left-[160px] lg:left-[140px]
-                        border-2 z-50
+                       border border-[var(--brand-secondary)] z-50
                        w-[200px] h-[130px]"
             style={{
-              borderColor: "var(--brand-secondary)",
               boxShadow: "var(--shadow-glow-secondary)",
             }}
           >
@@ -69,10 +66,9 @@ const ProjectImages = () => {
           {/* Bottom Right */}
           <div
             className="absolute bottom-[60px] lg:right-[160px] right-[170px]
-                        border-2 z-20
+                       border border-[var(--brand-secondary)] z-20
                        w-[240px] h-[150px]"
             style={{
-              borderColor: "var(--brand-secondary)",
               boxShadow: "var(--shadow-glow-secondary)",
             }}
           >
@@ -87,10 +83,9 @@ const ProjectImages = () => {
           {/* Extra Image */}
           <div
             className="absolute top-[60px] lg:right-[150px] right-[170px]
-                      border-2 z-30
+                       border border-[var(--brand-secondary)] z-30
                        w-[160px] h-[100px]"
             style={{
-              borderColor: "var(--brand-secondary)",
               boxShadow: "var(--shadow-glow-secondary)",
             }}
           >

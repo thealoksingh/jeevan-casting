@@ -3,39 +3,44 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 const services = [
   {
-    title: "AI & Intelligent Solutions",
+    title: "Talent Discovery & Scouting",
     description:
-      "Utilizes advanced Artificial Intelligence technologies such as predictive analytics for forecasting trends and detecting anomalies. Features Vision AI (KEYE) that performs computer vision tasks, enabling image and video analysis. These systems are designed to enhance efficiency and automation in manufacturing processes and smart city implementations.",
-    category: "Artificial Intelligence",
-    image: "/ai-robot-technology-futuristic.jpg",
+      "Comprehensive nationwide talent hunting services to discover fresh faces and experienced actors across all age groups and demographics. Our expert scouts travel across India to identify unique talents that match specific character requirements for various entertainment projects.",
+    category: "Talent Acquisition",
+    image:
+      "https://images.unsplash.com/photo-1577190651915-bf62d54d5b36?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Surveillance & Security Systems",
+    title: "Casting Direction Services",
     description:
-      "Provides comprehensive security solutions including advanced IP cameras for real-time monitoring, robust access control systems to regulate facility entry, and AI-enabled monitoring that leverages artificial intelligence to detect threats proactively. This service targets enterprises and government facilities requiring heightened security measures.",
-    category: "Security Technology",
-    image: "/cctv.jpg",
+      "Professional casting direction for films, television shows, web series, and digital content with precise character matching. Our experienced casting directors understand the nuances of storytelling and ensure perfect artist-character alignment for memorable performances.",
+    category: "Casting Direction",
+    image:
+      "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Smart Infrastructure Solutions",
+    title: "Artist Portfolio Development",
     description:
-      "Delivers integrated IT networking, cloud infrastructure, and IoT device management solutions essential for modern workplaces. These smart infrastructure services ensure seamless connectivity, data integration, and efficient management of smart devices to support digital transformation in corporate environments.",
-    category: "Infrastructure",
-    image: "/smart-city-infrastructure-technology.jpg",
+      "Complete artist development services including professional portfolio creation, high-quality headshots, showreel production, and career guidance. We help aspiring artists build compelling profiles that showcase their versatility and talent to industry professionals.",
+    category: "Artist Development",
+    image:
+      "https://images.unsplash.com/photo-1570834322056-ba3e2994ab85?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Industry-Specific Smart Solutions",
+    title: "Audition Management",
     description:
-      "Offers customized automation tools and digital workflow solutions tailored for specific industries such as manufacturing, retail, and education. These smart solutions streamline operations, improve productivity, and address unique challenges faced by each sector through specialized technology implementation.",
-    category: "Custom Solutions",
-    image: "/industrial-automation-manufacturing.jpg",
+      "End-to-end audition process management from initial scheduling to final artist selection for production houses. Our systematic approach ensures efficient audition workflows, proper documentation, and seamless coordination between artists and production teams.",
+    category: "Production Support",
+    image:
+      "https://plus.unsplash.com/premium_photo-1664302907956-bfb009c075fd?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "SmartOps Applications",
+    title: "Celebrity Management",
     description:
-      "Focuses on operational excellence by providing dashboards for real-time insights, automation of business processes, and data analytics to drive Industry 4.0 transformations. These applications empower organizations to enhance efficiency, make data-driven decisions, and advance digital workflows.",
-    category: "Operations",
-    image: "/digital-dashboard-analytics-operations.jpg",
+      "Comprehensive celebrity coordination services including contract negotiations, scheduling management, and production logistics. We handle all aspects of celebrity engagement to ensure smooth collaboration between stars and production houses for successful project completion.",
+    category: "Celebrity Services",
+    image:
+      "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -56,27 +61,76 @@ const Single = ({ item, index }) => {
         {/* Image */}
         <motion.div
           ref={ref}
-          // Apply scroll effect only on desktop, no effect on mobile
-          style={{ y: typeof window !== "undefined" && window.innerWidth > 768 ? y : 0 }}
+          style={{
+            y: typeof window !== "undefined" && window.innerWidth > 768 ? y : 0,
+          }}
           className="flex-1 flex justify-center"
         >
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-full max-w-[500px] h-64 md:h-80 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-          />
+          <div className="relative group">
+            {/* LEFT film holes */}
+            <div className="absolute -left-6 top-0 h-full hidden border border-[var(--brand-secondary-hover)] p-1 sm:flex flex-col justify-between py-3">
+              {[...Array(7)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-3 h-8 bg-[var(--brand-secondary)] rounded-sm opacity-80 shadow-[0_0_8px_rgba(255,248,41,0.6)]"
+                />
+              ))}
+            </div>
+
+            {/* RIGHT film holes */}
+            <div className="absolute -right-6 top-0 h-full hidden border border-[var(--brand-secondary-hover)] p-1 sm:flex flex-col justify-between py-3">
+              {[...Array(7)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-3 h-8 bg-[var(--brand-secondary)] rounded-sm opacity-80 shadow-[0_0_8px_rgba(255,248,41,0.6)]"
+                />
+              ))}
+            </div>
+
+            {/* IMAGE FRAME */}
+            <div
+              className="
+        relative
+        overflow-hidden
+        bg-black
+        rounded-sm
+        border border-white/10
+        shadow-[0_0_40px_rgba(255,248,41,0.15)]
+        group-hover:shadow-[0_0_80px_rgba(255,248,41,0.35)]
+        transition-all
+        duration-500
+      "
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="
+          w-full
+          max-w-[520px]
+          aspect-[16/9]
+          object-cover
+          group-hover:scale-110
+          transition-transform
+          duration-700
+        "
+              />
+
+              {/* Cinematic gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/50"></div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Text */}
         <div className="flex-1 flex flex-col gap-6 text-white p-4 md:p-0 text-center md:text-left ">
-          <h4 className="text-teal-400 font-semibold">{item.category}</h4>
-          <h2 className="text-2xl md:text-4xl font-bold ">
-            {item.title}
-          </h2>
+          <h4 className="text-[var(--brand-secondary)] font-semibold">
+            {item.category}
+          </h4>
+          <h2 className="text-2xl md:text-4xl font-bold ">{item.title}</h2>
           <p className="text-base md:text-lg text-gray-200 font-light text-justify leading-relaxed">
             {item.description}
           </p>
-          <button className="w-40 md:w-48 px-6 py-2 bg-cyan-500 text-white font-semibold rounded-md hover:bg-cyan-400 transition">
+          <button className="w-40 md:w-48 px-6 py-2 bg-[var(--brand-secondary)] text-[var(--brand-primary)] font-semibold rounded-sm hover:bg-[var(--brand-secondary-hover)] transition">
             Learn More
           </button>
         </div>
@@ -100,7 +154,6 @@ const Portfolio = () => {
   return (
     <div className="portfolio relative" ref={ref}>
       <div className="max-w-6xl mx-auto py-16">
-       
         {services.map((item, idx) => (
           <Single key={idx} item={item} index={idx} />
         ))}

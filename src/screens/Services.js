@@ -28,12 +28,12 @@ function Services() {
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-6">
           <BouncyText
-            text="Our Solutions & Services"
+            text="Our Casting Services"
             className="text-4xl sm:text-4xl md:text-5xl text-white font-extrabold leading-tight mb-4"
           />
           <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
-            From AI-powered applications to secure infrastructure, we deliver
-            end-to-end technology solutions for the industries of tomorrow.
+            From talent discovery to production support, we provide
+            comprehensive casting solutions for Bollywood, regional cinema, and digital content.
           </p>
         </div>
       </div>
@@ -46,17 +46,17 @@ function Services() {
           {/* Services Carousel */}
           <div className="py-16  ">
             <div className="max-w-6xl mx-auto mb-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">Technology Solutions</h2>
+              <h2 className="text-3xl font-bold mb-4">Casting Solutions</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore our comprehensive range of cutting-edge solutions
-                designed to transform your business operations.
+                Explore our comprehensive range of casting services
+                designed to bring your creative vision to life.
               </p>
             </div>
             <ServicesCarousel1 />
           </div>
           <div className=" text-center">
           <BouncyText
-            text="Our Services"
+            text="Our Expertise"
             className="text-4xl sm:text-4xl md:text-5xl text-white font-extrabold leading-tight mb-4"
           />
           </div>
@@ -66,24 +66,24 @@ function Services() {
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {[
                 {
-                  icon: "🤝",
-                  title: "End-to-End Partner",
-                  desc: "Complete technology solutions from concept to deployment",
+                  icon: "🎭",
+                  title: "Complete Casting Partner",
+                  desc: "End-to-end casting solutions from auditions to final selection",
                 },
                 {
-                  icon: "🧠",
-                  title: "AI-Driven Intelligence",
-                  desc: "Advanced AI at the core of every solution",
+                  icon: "🌟",
+                  title: "Talent Discovery",
+                  desc: "Nationwide scouting for fresh faces and seasoned performers",
                 },
                 {
-                  icon: "📈",
-                  title: "Scalable & Secure",
-                  desc: "Enterprise-grade security with unlimited scalability",
+                  icon: "🎬",
+                  title: "Industry Expertise",
+                  desc: "Deep understanding of Bollywood, regional, and OTT requirements",
                 },
                 {
                   icon: "🏆",
-                  title: "Trusted Globally",
-                  desc: "Trusted by enterprises and governments worldwide",
+                  title: "Proven Track Record",
+                  desc: "Successfully cast 500+ projects across multiple platforms",
                 },
               ].map((item, i) => (
                 <div key={i}>
@@ -113,17 +113,17 @@ function Services() {
       <div className="py-16 bg-[var(--brand-primary)] text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Looking for the Right Technology Partner?
+            Looking for the Perfect Cast?
           </h2>
           <p className="text-xl text-white mb-8">
-            Explore our solutions or connect with us for a customized proposal
-            tailored to your needs.
+            Discover our casting services or connect with us for a customized casting solution
+            tailored to your project needs.
           </p>
            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/about" className="px-8 py-2 bg-[var(--brand-secondary)] hover:bg-[var(--brand-secondary)]/80 text-[var(--brand-primary)] font-semibold rounded-xl transition transform hover:scale-105">
-              Explore Us
+            <a href="/about" className="px-8 py-2 bg-[var(--brand-secondary)] hover:bg-[var(--brand-secondary)]/80 text-[var(--brand-primary)] font-semibold rounded-sm transition transform hover:scale-105">
+              About Us
             </a>
-            <a href="/contact" className="px-8 py-2 bg-transparent border-2 border-[var(--brand-secondary)] text-[var(--brand-secondary)] hover:bg-[var(--brand-secondary)] hover:text-[var(--brand-primary)] font-semibold rounded-xl transition-all">
+            <a href="/contact" className="px-8 py-2 bg-transparent border-2 border-[var(--brand-secondary)] text-[var(--brand-secondary)] hover:bg-[var(--brand-secondary)] hover:text-[var(--brand-primary)] font-semibold rounded-sm transition-all">
               Contact Us
             </a>
           </div>

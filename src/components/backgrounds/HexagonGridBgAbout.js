@@ -28,7 +28,7 @@ function HexagonGridBgAbout() {
         background: `linear-gradient(
           to bottom,
           #0b0c10,                
-          rgba(55, 134, 143, 0.61),
+         rgba(142, 143, 55, 0.1),
           #0b0c10                
         )`,
       }}
@@ -47,7 +47,7 @@ function HexagonGridBgAbout() {
             <polygon
               points="50,0 100,25 100,62 50,87 0,62 0,25"
               fill="rgba(255,255,255,0.04)"
-              stroke="rgba(255,255,255,0.1)"
+               stroke="rgba(255,215,0,0.2)" 
               strokeWidth="2"
             />
           </pattern>
@@ -60,18 +60,18 @@ function HexagonGridBgAbout() {
         {/* Left side text */}
         <div className="flex flex-col justify-center text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            About Our Vision
+            About Our Mission
           </h1>
           <p className="text-lg md:text-xl text-white mb-6">
-            We combine advanced surveillance technology with smart analytics to
-            deliver secure, reliable, and scalable solutions for businesses and
-            communities worldwide.
+            We connect talented artists with visionary filmmakers, creating
+            memorable characters and bringing stories to life through expert
+            casting services across Bollywood and regional cinema.
           </p>
           <div>
             <button
              onClick={() => setOpen(true)}
-              className="inline-block px-6 py-2 text-lg font-semibold bg-[var(--brand-accent)] text-white rounded-xl shadow-lg hover:bg-[var(--brand-accent-hover)] transform hover:scale-105 transition"
-            >
+            className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition"
+                  >
               Contact Us
             </button>
           </div>
@@ -83,29 +83,29 @@ function HexagonGridBgAbout() {
               <h2 className="lg:text-4xl sm:text-3xl text-2xl font-bold text-[var(--brand-secondary)]">
                 {projects}+
               </h2>
-              <p className="mt-1 text-sm">Projects</p>
+              <p className="mt-1 text-sm">Films Cast</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition">
               <h2 className="lg:text-4xl sm:text-3xl text-2xl font-bold text-[var(--brand-secondary)]">
                 {clients}+
               </h2>
-              <p className="mt-1 text-sm">Clients</p>
+              <p className="mt-1 text-sm">Artists</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition">
               <h2 className="lg:text-4xl sm:text-3xl text-2xl font-bold text-[var(--brand-secondary)]">
                 {countries}+
               </h2>
-              <p className="mt-1 text-sm">Countries</p>
+              <p className="mt-1 text-sm">States</p>
             </div>
           </div>
 
           <ul className="mt-6 space-y-3 text-white text-lg">
-            <li>✔ AI-powered monitoring</li>
-            <li>✔ 24/7 real-time alerts</li>
-            <li>✔ Scalable cloud integration</li>
-            <li>✔ Custom enterprise solutions</li>
+            <li>✔ Expert casting direction</li>
+            <li>✔ Nationwide talent scouting</li>
+            <li>✔ Artist portfolio development</li>
+            <li>✔ Production support services</li>
           </ul>
         </div>
       </div>

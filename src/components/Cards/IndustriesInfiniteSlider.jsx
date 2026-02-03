@@ -2,12 +2,12 @@ import { motion, useAnimationFrame } from "framer-motion";
 import { useState } from "react";
 
 const industries = [
-  { name: "Manufacturing", icon: "🏭" },
-  { name: "Smart Cities", icon: "🏙️" },
-  { name: "Healthcare", icon: "🏥" },
-  { name: "Enterprises", icon: "🏢" },
-  { name: "Education", icon: "🎓" },
-  { name: "Retail", icon: "🛍️" },
+  { name: "Bollywood Films", icon: "🎬" },
+  { name: "Regional Cinema", icon: "🎭" },
+  { name: "OTT Platforms", icon: "📺" },
+  { name: "TV Serials", icon: "📻" },
+  { name: "Web Series", icon: "💻" },
+  { name: "Advertisements", icon: "📢" },
 ];
 
 export default function IndustriesInfiniteSlider() {
@@ -34,7 +34,7 @@ export default function IndustriesInfiniteSlider() {
     <div className="py-16 bg-[var(--card-background)] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-white text-center mb-12">
-          Industries We Serve
+          Platforms We Cast For
         </h2>
         <motion.div
           style={{ transform: `translateX(${offsetX}px)` }}

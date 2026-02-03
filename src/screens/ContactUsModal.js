@@ -28,7 +28,7 @@ function ContactUsModal({ isOpen, onClose }) {
           setShowFailureAlert(true);
           setLoading(false);
           console.log("Failed to send: " + error.text);
-        }
+        },
       );
   };
 
@@ -36,7 +36,7 @@ function ContactUsModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm pt-12 px-4 mt-10">
-      <div className="relative w-full max-w-md mx-auto rounded-xl border border-cyan-300 border-[0.2px] shadow-lg p-4 md:p-6 text-white backdrop-blur-md bg-gradient-to-br from-[#67e8f9]/10 via-[#ef0163]/5 to-transparent">
+      <div className="relative w-full max-w-md mx-auto rounded-sm border border-[var(--brand-secondary)] border-[0.2px] shadow-lg p-4 md:p-6 text-white backdrop-blur-md bg-gradient-to-br from-yellow-400/10 via-[var(--brand-accent)]/5 to-transparent">
         <button
           onClick={onClose}
           className="absolute top-2 right-4 text-gray-300 hover:text-white text-lg"
@@ -44,22 +44,33 @@ function ContactUsModal({ isOpen, onClose }) {
           ✕
         </button>
 
-        <h2 className="text-xl font-bold mb-4 text-[#67e8f9] text-center">
-          Schedule a Call
+        <h2 className="text-xl font-bold mb-4 text-[var(--brand-secondary)] text-center">
+          Submit Your Profile
         </h2>
 
         <form ref={form} onSubmit={sendEmail} className="space-y-3">
-          <div>
-            <label className="block text-sm mb-1 text-gray-300">Name</label>
-            <input
-              type="text"
-              name="user_name"
-              placeholder="Your Name"
-              required
-              className="w-full px-3 py-2 rounded-lg bg-white/5 border border-cyan-300/30 text-white focus:outline-none focus:ring-2 focus:ring-cyan-300"
-            />
-          </div>
+          <div className="flex flex-row gap-2">
+            <div>
+              <label className="block text-sm mb-1 text-gray-300">Name</label>
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Your Name"
+                required
+                className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
+              />
+            </div>
 
+            <div>
+              <label className="block text-sm mb-1 text-gray-300">Phone</label>
+              <input
+                type="tel"
+                name="user_phone"
+                placeholder="Your Phone Number"
+                className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
+              />
+            </div>
+          </div>
           <div>
             <label className="block text-sm mb-1 text-gray-300">Email</label>
             <input
@@ -67,35 +78,68 @@ function ContactUsModal({ isOpen, onClose }) {
               name="user_email"
               placeholder="Your Email"
               required
-              className="w-full px-3 py-2 rounded-lg bg-white/5 border border-cyan-300/30 text-white focus:outline-none focus:ring-2 focus:ring-cyan-300"
+              className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
             />
           </div>
 
-          <div>
-            <label className="block text-sm mb-1 text-gray-300">Phone</label>
+          <div className="flex flex-row gap-2">
+            <div>
+              <label className="block text-sm mb-1 text-gray-300">Height</label>
+              <input
+                type="height"
+                name=""
+                placeholder="Enter Height"
+                required
+                className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
+              />
+            </div>
+            <div>
+              <label className="block text-sm mb-1 text-gray-300">Age</label>
+              <input
+                type="Age"
+                name=""
+                placeholder="Enter Age"
+                required
+                className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
+              />
+            </div>
+          </div>
+          <div className="flex flex-row gap-2">
+            <div>
+              <label className="block text-sm mb-1 text-gray-300">Gender</label>
+              <input
+                type="Gender"
+                name=""
+                placeholder="Enter Gender"
+                required
+                className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
+              />
+            </div>
+            <div>
+              <label className="block text-sm mb-1 text-gray-300">Weight</label>
+              <input
+                type="Weight"
+                name=""
+                placeholder="Enter Weight"
+                required
+                className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
+              />
+            </div>
+          </div>
+          <div className="pb-4">
+            <label className="block text-sm mb-1 text-gray-300">Location</label>
             <input
-              type="tel"
-              name="user_phone"
-              placeholder="Your Phone Number"
-              className="w-full px-3 py-2 rounded-lg bg-white/5 border border-cyan-300/30 text-white focus:outline-none focus:ring-2 focus:ring-cyan-300"
+              type=""
+              name=""
+              placeholder="Enter Location E.g Country, State, City"
+              className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
             />
-          </div>
-
-          <div>
-            <label className="block text-sm mb-1 text-gray-300">Message</label>
-            <textarea
-              rows="3"
-              name="message"
-              placeholder="Your Message"
-              required
-              className="w-full px-3 py-2 rounded-lg bg-white/5 border border-cyan-300/30 text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 resize-none"
-            ></textarea>
           </div>
 
           {loading ? (
-            <div className="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-[#67e8f9]/80 text-white font-semibold shadow-md">
+            <div className="w-full flex items-center justify-center gap-2 py-2 rounded-sm bg-[var(--brand-secondary)]/80 text-[var(--brand-primary)] font-semibold shadow-md">
               <svg
-                className="animate-spin h-5 w-5 text-white"
+                className="animate-spin h-5 w-5 text-[var(--brand-primary)]"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -119,7 +163,7 @@ function ContactUsModal({ isOpen, onClose }) {
           ) : (
             <button
               type="submit"
-              className="w-full py-2 rounded-lg bg-[#67e8f9]/80 hover:bg-[#67e8f9]/70 transition-all text-white font-semibold shadow-md"
+              className="w-full py-2   rounded-sm bg-[var(--brand-secondary)] hover:bg-[var(--brand-secondary-hover)] transition-all text-[var(--brand-primary)] font-semibold shadow-md"
             >
               Submit
             </button>

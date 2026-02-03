@@ -2,7 +2,7 @@ import React from "react";
 import HexagonGridBgAbout from "../components/backgrounds/HexagonGridBgAbout";
 import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
 import BlurryCardWithIcon from "../components/Cards/BlurryCardWithIcon";
-import { LineChart, Shield, Network, Cpu } from "lucide-react";
+import { Camera, Users, Star, Award } from "lucide-react";
 import BlurryImageCard from "../components/Cards/BlurryImageCard";
 import BouncyText from "../components/BouncyText";
 import JourneyTimeline from "../components/JourneyTimeline";
@@ -10,59 +10,59 @@ import JourneyTimeline from "../components/JourneyTimeline";
 function About() {
   const services = [
     {
-      title: "Real-Time KPI Tracking",
+      title: "Talent Discovery",
       description:
-        "Monitor performance instantly with live dashboards, interactive metrics, and predictive insights.",
-      Icon: LineChart,
+        "Scouting fresh faces and seasoned actors across India for films, TV shows, and digital content.",
+      Icon: Users,
     },
     {
-      title: "Surveillance & Security",
+      title: "Casting Direction",
       description:
-        "AI-powered CCTV, biometric access, and 24/7 monitoring for ultimate safety and reliability.",
-      Icon: Shield,
+        "Expert casting services for Bollywood, regional cinema, and OTT platforms with precision matching.",
+      Icon: Camera,
     },
     {
-      title: "Smart Infrastructure",
+      title: "Artist Management",
       description:
-        "Scalable IT networks, IoT devices, and cloud systems designed for Industry 4.0 growth.",
-      Icon: Network,
+        "Complete portfolio development, audition prep, and career guidance for aspiring artists.",
+      Icon: Star,
     },
     {
-      title: "AI-Driven Solutions",
+      title: "Production Support",
       description:
-        "Leverage machine learning and automation to optimize workflows and unlock innovation.",
-      Icon: Cpu,
+        "End-to-end casting solutions from pre-production planning to final artist selection.",
+      Icon: Award,
     },
   ];
 
   const team = [
     {
-      title: "Real-Time KPI Tracking",
+      title: "Casting Directors",
       description:
-        "Monitor performance instantly with live dashboards, interactive metrics, and predictive insights.",
+        "Experienced professionals who understand the nuances of character matching and industry requirements.",
       Image:
-        "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1682146733343-eb0de7a744f2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      title: "Surveillance & Security",
+      title: "Talent Scouts",
       description:
-        "AI-powered CCTV, biometric access, and 24/7 monitoring for ultimate safety and reliability.",
+        "Dedicated scouts who travel across India to discover hidden gems and fresh talent.",
       Image:
-        "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1577190651915-bf62d54d5b36?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      title: "Smart Infrastructure",
+      title: "Artist Coordinators",
       description:
-        "Scalable IT networks, IoT devices, and cloud systems designed for Industry 4.0 growth.",
+        "Professional coordinators who manage artist schedules, contracts, and production logistics.",
       Image:
-        "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1518930259200-3e5b29f42096?q=80&w=882&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      title: "AI-Driven Solutions",
+      title: "Creative Consultants",
       description:
-        "Leverage machine learning and automation to optimize workflows and unlock innovation.",
+        "Industry veterans who provide strategic guidance on casting choices and market trends.",
       Image:
-        "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1543242594-c8bae8b9e708?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
   return (
@@ -78,45 +78,38 @@ function About() {
               className="text-2xl sm:text-4xl md:text-5xl text-white  px-4 mt-3 font-extrabold leading-tight text-center  "
             />
           </div>
-          <div>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
               At{" "}
-              <span className="font-semibold text-pink-400">
-                Jeevan Casting (C&C)
+              <span className="font-semibold text-[var(--brand-secondary)]">
+                Jeevan Casting
               </span>
-              , technology isn’t just about systems. it’s about
-              <span className="text-cyan-300 font-semibold">
-                {" "}
-                transformation
-              </span>
-              ,<span className="text-cyan-300 font-semibold"> empowerment</span>
-              , and shaping a smarter future.
+              , we don’t just cast actors — we discover{" "}
+              <span className="text-white font-semibold">dreams</span>, shape{" "}
+              <span className="text-white font-semibold">stories</span>, and
+              bring unforgettable characters to life.
             </p>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed mt-4">
-              Since <span className="font-semibold">2010</span>, we’ve grown
-              from a vision-driven startup into a company that blends
-              <span className="text-pink-400 font-semibold"> creativity</span>,
-              <span className="text-pink-400 font-semibold"> engineering</span>,
-              and
-              <span className="text-pink-400 font-semibold"> innovation</span>.
-            </p>
-
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed mt-4">
-              From <span className="font-semibold">AI-powered solutions</span>{" "}
-              and
-              <span className="font-semibold"> smart surveillance</span> to
-              <span className="font-semibold"> scalable infrastructures</span>,
-              we design ecosystems where technology works seamlessly for people.
-            </p>
-
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-cyan-300 mt-6">
-              We’re more than service providers — <br />
-              we are{" "}
-              <span className="text-pink-400 font-bold">
-                partners in progress
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/80 mt-3">
+              Since <span className="font-semibold">2017</span>, we have
+              connected{" "}
+              <span className="text-white font-semibold">talented artists</span>{" "}
+              with{" "}
+              <span className="text-white font-semibold">
+                visionary filmmakers
               </span>
-              .
+              , helping create powerful on-screen experiences through thoughtful
+              casting.
+            </p>
+
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/80 mt-3">
+              From Bollywood productions and regional cinema to rapidly growing
+              OTT platforms, our work focuses on identifying authentic talent
+              and matching it with the right opportunities.
+            </p>
+
+            <p className="text-base sm:text-lg md:text-xl font-semibold text-[var(--brand-secondary)] mt-5">
+              More than casting directors — we are dream makers.
             </p>
           </div>
 
@@ -177,8 +170,7 @@ function About() {
         </div>
       </section>
 
-    
-       <section className="relative">
+      <section className="relative">
         <HexagonGridBgAbout />
       </section>
     </div>

@@ -11,6 +11,7 @@ import ContactUsModal from "./ContactUsModal";
 import insta from "../assests/images/insta.png";
 import FlippingCardCarousel from "../components/Cards/FlippingCardCarousel";
 import MiniReelCard from "../components/Cards/MiniReelCard";
+import MyHighlight from "../components/MyHighlight";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -39,7 +40,6 @@ function Home() {
       backText:
         "Using cutting-edge technologies like React, Next.js, Spring Boot, and cloud-native systems, we create applications that are not just functional but future-ready. Our solutions are designed to handle scale, performance, and reliability while keeping user experience at the core.",
     },
-   
   ];
 
   const clients = [
@@ -92,44 +92,47 @@ function Home() {
         {/* Overlay (optional) for extra dim effect */}
         <div className="absolute inset-0 bg-black/30"></div>
 
-        <div className="relative p-10 flex flex-col lg:flex-row items-center gap-10 z-10 max-w-7xl">
+        <div className="relative lg:p-10 p-10 pb-20 flex flex-col lg:flex-row items-center gap-10 z-10 max-w-7xl">
+          {/* Text Section */}
           <div className="flex-1 pt-10 text-center lg:text-left">
             <h1 className="text-[2rem] md:text-[2rem] xl:text-[3rem] font-extrabold tracking-tight text-white">
-              Powering Industry 4.0 with Smart, Secure Solutions
+              Jeevan Casting Company — Spotlighting Talent, Shaping Dreams
             </h1>
+
             <p className="mt-2 text-[var(--neutral-gray)] text-base md:text-lg">
-              by <span className="text-white/90">Jeevan Casting</span> — Vision
-              AI • Surveillance • Smart Infrastructure • SmartOps
+              by <span className="text-white/90">Jeevan Casting</span> —
+              Bollywood • Films • Web Series • Ads
             </p>
+
             <p className="mt-4 text-xl md:text-2xl font-semibold text-[var(--brand-secondary)]">
-              Integrated systems that drive{" "}
-              <span className="text-white">security, efficiency,</span> and{" "}
-              <span className="text-white">real-time insights</span>.
+              Connecting <span className="text-white">actors, models,</span> and{" "}
+              <span className="text-white">performers</span> with the perfect
+              roles.
             </p>
+
             <p className="mt-5 text-sm md:text-base text-slate-300/90 max-w-2xl">
-              We design and deploy{" "}
+              We help talent shine on screen by providing{" "}
               <span className="text-white font-semibold">
-                end-to-end solutions
-              </span>{" "}
-              across Vision AI, Surveillance & Security, and Smart
-              Infrastructure— integrated with{" "}
-              <span className="text-white font-semibold">
-                SmartOps applications
-              </span>{" "}
-              to modernize operations and scale with your business.
+                audition opportunities
+              </span>
+              , portfolio showcases, and{" "}
+              <span className="text-white font-semibold">casting support</span>{" "}
+              for films, commercials, and web series—making dreams of Bollywood
+              stardom a reality.
             </p>
+
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <button
                 onClick={() => setOpen(true)}
                 className="inline-flex items-center justify-center rounded-sm px-6 py-3 bg-[var(--brand-secondary)] text-black font-semibold shadow hover:opacity-90 transition"
               >
-                Request a Proposal
+                Submit Your Profile
               </button>
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl px-5 py-3 border border-white/20 text-white hover:bg-white/5 transition"
+                className="inline-flex items-center justify-center rounded-sm px-5 py-3 border border-white/20 text-white hover:bg-white/5 transition"
               >
-                Book a 15-min Discovery Call
+                Book an Audition Slot
               </a>
             </div>
           </div>
@@ -143,7 +146,8 @@ function Home() {
         <AnimatedCanvas />
         <div className="absolute inset-0 z-10 backdrop-blur-md"></div>
         <div className="relative z-20 text-white text-center">
-           <div className="m-10">
+          <MyHighlight/>
+          <div className="m-10">
             <BouncyText
               text={`Meets us`}
               className="text-2xl sm:text-4xl md:text-5xl text-white  px-4 mt-3 font-extrabold leading-tight text-center  "
@@ -154,8 +158,8 @@ function Home() {
               <HoverFlipCard key={idx} index={idx} {...s} />
             ))}
           </div>
-         
-             <div className="m-10">
+
+          <div className="m-10">
             <BouncyText
               text={`Our Clients`}
               className="text-2xl sm:text-4xl md:text-5xl text-white  px-4 mt-3 font-extrabold leading-tight text-center  "

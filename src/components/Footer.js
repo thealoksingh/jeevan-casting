@@ -23,12 +23,12 @@ function Footer() {
             Jamshedpur Office
           </h3>
           <p className="mt-2 text-sm hover:text-[var(--brand-secondary)] transition-colors">
-            <a href="mailto:info@curvesandcodes.com">info@curvesandcodes.com</a>
+            <a href="mailto:info@curvesandcodes.com">castingjeevan@gmail.com</a>
           </p>
           <p className="mt-2 text-sm leading-relaxed">
             435, 4th Floor, Ashiana Trade Center, Adityapur, Jamshedpur 831013
           </p>
-          <p className="mt-2 text-sm">0657-2383110, 7004611986</p>
+          <p className="mt-2 text-sm"> +91 7360802196</p>
         </div>
 
         <div>
@@ -37,14 +37,14 @@ function Footer() {
           </h3>
           <p className="mt-2 text-sm hover:text-[var(--brand-secondary)] transition-colors">
             <a href="mailto:sales@curvesandcodes.com">
-              sales@curvesandcodes.com
+             castingjeevan@gmail.com
             </a>
           </p>
 
           <p className="mt-2 text-sm leading-relaxed">
             Chhatarpur Enclave Phase 1, Chattarpur, New Delhi 110074
           </p>
-          <p className="mt-2 text-sm">9871165827</p>
+          <p className="mt-2 text-sm"> +91 7360802196</p>
         </div>
       </div>
       <div className="mt-10 border-t border-white/10 py-4">

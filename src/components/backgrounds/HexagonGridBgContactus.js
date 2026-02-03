@@ -8,7 +8,7 @@ function HexagonGridBgContactus() {
         background: `linear-gradient(
           to bottom,
           #0b0c10,
-          rgba(55, 134, 143, 0.61),
+           rgba(142, 143, 55, 0.1),
           #0b0c10
         )`,
       }}
@@ -28,7 +28,7 @@ function HexagonGridBgContactus() {
             <polygon
               points="50,0 100,25 100,62 50,87 0,62 0,25"
               fill="rgba(255,255,255,0.02)"
-              stroke="rgba(255,255,255,0.08)"
+              stroke="rgba(255,215,0,0.2)" 
               strokeWidth="1.5"
             />
           </pattern>

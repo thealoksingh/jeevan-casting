@@ -84,40 +84,39 @@ const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile Side Menu */}
-      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        <button className="close-btn" onClick={toggleNavbar}>
-          <XMarkIcon className="h-6 w-6" />
-        </button>
-        <ul>
-          {navLinks.map((link, idx) => (
-            <li key={idx}>
-              <NavLink
-                to={link.path}
-                className="nav-link"
-                onClick={toggleNavbar}
-              >
-                {link.name}
-              </NavLink>
-              {link.subPaths && (
-                <ul className="mobile-submenu">
-                  {link.subPaths.map((sub, subIdx) => (
-                    <li key={subIdx}>
-                      <NavLink
-                        to={sub.path}
-                        className="nav-link"
-                        onClick={toggleNavbar}
-                      >
-                        {sub.name}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="mobile-menu open">
+          <ul>
+            {navLinks.map((link, idx) => (
+              <li key={idx}>
+                <NavLink
+                  to={link.path}
+                  className="nav-link"
+                  onClick={toggleNavbar}
+                >
+                  {link.name}
+                </NavLink>
+                {link.subPaths && (
+                  <ul className="mobile-submenu">
+                    {link.subPaths.map((sub, subIdx) => (
+                      <li key={subIdx}>
+                        <NavLink
+                          to={sub.path}
+                          className="nav-link"
+                          onClick={toggleNavbar}
+                        >
+                          {sub.name}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Overlay */}
       <ContactUsModal

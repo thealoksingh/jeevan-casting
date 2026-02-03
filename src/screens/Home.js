@@ -44,7 +44,7 @@ function Home() {
   ];
 
   return (
-    <div className="bg-[var(--brand-primary)] overflow-x-hidden lg:pt-16">
+    <div className="bg-[var(--brand-primary)] overflow-x-hidden pt-16">
       {/* HERO SECTION */}
       <div className="relative flex justify-center">
         {/* Background video */}
@@ -104,7 +104,7 @@ function Home() {
                 href="/contact"
                 className="rounded-sm px-5 py-3 border border-white/20 text-white hover:bg-white/5 transition"
               >
-                Book an Audition Slot
+                Connect With Us
               </a>
             </div>
           </div>
@@ -112,13 +112,13 @@ function Home() {
       </div>
 
       {/* SECOND SECTION */}
-      <section className="relative min-h-[100dvh]  flex flex-col items-center justify-center sm:px-6 lg:px-16 pb-16">
+      <section className="relative min-h-[100dvh] flex flex-col items-center justify-center ">
         <AnimatedCanvas />
-        <div className="absolute inset-0 z-10 backdrop-blur-md"></div>
+        <div className="absolute inset-0 z-10 backdrop-blur-md px-4"></div>
 
-        <div className="relative z-20 text-white text-center w-full max-w-7xl">
+        <div className="relative z-20 text-white text-center w-full">
           <MyHighlight />
-
+        <div className="max-w-8xl mx-auto sm:px-6 lg:px-16 pb-16">
           {/* MEET US */}
           <div className="my-10">
             <BouncyText
@@ -142,7 +142,7 @@ function Home() {
           </div>
 
           {/* PROJECT 1 */}
-          <div className="mt-12 flex flex-col lg:flex-row items-center gap-12 mx-auto ">
+          <div className="mt-12 flex flex-col lg:flex-row items-center gap-12 mx-auto">
             <div className="w-full lg:w-1/2 flex justify-center">
               <ProjectImages />
             </div>
@@ -170,7 +170,7 @@ function Home() {
           </div>
 
           {/* PROJECT 2 */}
-          <div className="mt-16 flex flex-col lg:flex-row-reverse items-center gap-12 mx-auto  mb-10">
+          <div className="mt-16 flex flex-col lg:flex-row-reverse  items-center gap-12 mx-auto mb-10">
             <div className="w-full lg:w-1/2 flex justify-center">
               <ProjectImages />
             </div>
@@ -191,13 +191,14 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="my-10">
+          {/* <div className="my-10">
             <BouncyText
               text="Gallery"
               className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
             />
-          </div>
+          </div> */}
           <OrbitReels />
+        </div>
         </div>
       </section>
 

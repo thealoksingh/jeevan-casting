@@ -10,7 +10,7 @@ const MyHighlight = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundBlendMode: "multiply",
-        backgroundColor: "#10100b21", // important for multiply
+        backgroundColor: "#0b0b0b00", // important for multiply
       }}
       className="relative w-full py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
@@ -18,28 +18,30 @@ const MyHighlight = () => {
       <div className="absolute inset-0 bg-black/70"></div>
 
       <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-        
         {/* Owner Image */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="
-            flex-shrink-0
-            w-60 h-60
-            sm:w-72 sm:h-72
-            lg:w-80 lg:h-80
-            rounded-sm
-            overflow-hidden
-            border border-white/10
-            shadow-[0_0_60px_rgba(255,248,41,0.25)]
-            hover:shadow-[0_0_90px_rgba(255,248,41,0.45)]
-            transition
-            duration-500
-          "
+       className="
+  flex-shrink-0
+  w-60 h-60
+  sm:w-72 sm:h-72
+  lg:w-80 lg:h-80
+  rounded-full
+  border
+  border-[var(--brand-secondary)]
+  border-2
+  overflow-hidden
+  drop-shadow-[0_0_20px_rgba(255,248,41,0.85)]
+  hover:drop-shadow-[0_0_40px_rgba(255,248,41,0.55)]
+  transition-all
+  duration-500
+"
+
         >
           <img
-            src="/jeevan.jpeg"
+            src="/jeevan.png"
             alt="Owner Abhishek Kumar Jeevan"
             className="w-full h-full object-cover hover:scale-105 transition duration-700"
           />
@@ -70,7 +72,8 @@ const MyHighlight = () => {
             powerful storytelling.
           </p>
 
-          <button className="
+          <button
+            className="
             mt-6
             inline-flex
             items-center
@@ -85,7 +88,8 @@ const MyHighlight = () => {
             hover:scale-105
             transition
             duration-300
-          ">
+          "
+          >
             More About Us
           </button>
         </motion.div>

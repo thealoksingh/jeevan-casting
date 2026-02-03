@@ -1,0 +1,158 @@
+import React, { useRef, useState } from "react";
+import Footer from "../components/Footer";
+import HexagonGridBgContactus from "../components/backgrounds/HexagonGridBgContactus";
+import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
+import emailjs from "@emailjs/browser";
+import { emailKeys } from "../keys/key";
+import { LottieAlert } from "../components/lottie/LottieAlert";
+
+function ContactUs() {
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [showFailureAlert, setShowFailureAlert] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    setLoading(true);
+    e.preventDefault();
+    emailjs
+      .sendForm(emailKeys.serviceId, emailKeys.templateId, form.current, {
+        publicKey: emailKeys.publicKey,
+      })
+      .then(
+        () => {
+          setShowSuccessAlert(true);
+          console.log("Message sent successfully!");
+          form.current.reset();
+          setLoading(false);
+        },
+        (error) => {
+          setLoading(false);
+          setShowFailureAlert(true);
+          console.log(" Failed to send: " + error.text);
+        }
+      );
+  };
+
+  return (
+    <div className="bg-[#0b0c10] overflow-hidden min-h-screen">
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-15">
+        <AnimatedCanvas />
+        <div className="absolute inset-0 z-10 backdrop-blur-md"></div>
+
+        <div className="relative z-20 flex items-center justify-center px-2 w-full max-w-6xl">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Left side form */}
+            <div className="bg-gray-900/70 p-8 rounded-2xl shadow-[0_0_25px_rgba(239,1,100,0.219)] backdrop-blur-md border border-gray-700">
+              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent text-center">
+                Contact Us
+              </h2>
+              <form ref={form} onSubmit={sendEmail} className="space-y-5">
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder="Full Name"
+                  required
+                  className="w-full placeholder:text-white p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-cyan-500 outline-none text-white"
+                />
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="Email"
+                  required
+                  className="w-full p-3 placeholder:text-white rounded-lg bg-gray-800 border border-gray-700 focus:border-cyan-500 outline-none text-white"
+                />
+                <input
+                  type="tel"
+                  name="user_phone"
+                  placeholder="Mobile Number"
+                  className="w-full p-3 rounded-lg placeholder:text-white bg-gray-800 border border-gray-700 focus:border-cyan-500 outline-none text-white"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows="4"
+                  required
+                  className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-cyan-500 outline-none resize-none text-white"
+                ></textarea>
+                {loading ? (
+                  <div className="w-full flex items-center justify-center gap-2 p-3 rounded-lg bg-cyan-500 text-white font-semibold shadow-md cursor-not-allowed">
+                    <svg
+                      className="animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      />
+                    </svg>
+                    <span>Sending...</span>
+                  </div>
+                ) : (
+                  <button
+                    type="submit"
+                    className="w-full text-white placeholder:text-white p-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 font-semibold transition-colors shadow-md"
+                  >
+                    Send Message
+                  </button>
+                )}
+              </form>
+            </div>
+
+            {/* Right side text */}
+            <div className="flex flex-col justify-center p-8 bg-gray-900/40 rounded-2xl shadow-[0_0_25px_rgba(239,1,100,0.219)] backdrop-blur-md border border-gray-700">
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-pink-400 to-orange-400 bg-clip-text text-transparent">
+                Let’s Create Something Amazing Together
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                vitae risus at magna congue luctus. Sed non tellus sed ipsum
+                luctus posuere. Vivamus ac sem et lorem bibendum tempor sed a
+                lorem. Nullam pretium purus at quam efficitur, in interdum
+                tortor luctus.
+              </p>
+              <p className="mt-4 text-gray-400 italic">
+                "Your message is the first step toward building something
+                extraordinary."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative">
+        <HexagonGridBgContactus />
+      </section>
+      {showSuccessAlert && (
+        <LottieAlert
+          type="success"
+          message="Message submitted successfully 🎉"
+          onClose={() => setShowSuccessAlert(false)}
+          autoClose={true}
+          loop={false}
+        />
+      )}
+      {showFailureAlert && (
+        <LottieAlert
+          type="failure"
+          message="ohh !! Failed to Send Try again 🥹"
+          onClose={() => setShowFailureAlert(false)}
+          autoClose={true}
+          loop={true}
+        />
+      )}
+    </div>
+  );
+}
+
+export default ContactUs;

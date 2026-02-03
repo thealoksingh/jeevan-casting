@@ -130,7 +130,7 @@ const Single = ({ item, index }) => {
           <p className="text-base md:text-lg text-gray-200 font-light text-justify leading-relaxed">
             {item.description}
           </p>
-          <button className="w-40 md:w-48 px-6 py-2 bg-[var(--brand-secondary)] text-[var(--brand-primary)] font-semibold rounded-sm hover:bg-[var(--brand-secondary-hover)] transition">
+          <button className="w-40 md:w-48 px-6 py-2 bg-[var(--brand-secondary)] text-[var(--brand-primary)] font-semibold rounded-sm hover:bg-[var(--brand-secondary-hover)] transition mx-auto md:mx-0">
             Learn More
           </button>
         </div>

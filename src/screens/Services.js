@@ -7,7 +7,7 @@ import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
 
 function Services() {
   return (
-    <div className="w-full pt-16 bg-[var(--brand-primary)]">
+    <div className="w-full lg:pt-16 bg-[var(--brand-primary)]">
       {/* Hero Section with Video */}
       <div className="relative h-[50vh] overflow-hidden">
         {/* Video Background */}

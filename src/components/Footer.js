@@ -3,9 +3,9 @@ import { FaInstagram, FaFacebookF, FaXTwitter, FaYoutube, FaLinkedinIn } from "r
 
 function Footer() {
   return (
-    <footer className="bg-[var(--brand-primary)] text-[var(--neutral-bg-light)] pt-14">
+    <footer  className="bg-[var(--brand-primary)] text-[var(--neutral-bg-light)] pt-14">
       
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div  className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
         
         {/* LOGO + ABOUT */}
         <div className="text-center md:text-left">
@@ -46,7 +46,8 @@ function Footer() {
         </div>
 
         {/* SOCIAL MEDIA */}
-        <div className="text-center md:text-left">
+        <div 
+          className="text-center md:text-left">
           <h3 className="text-lg font-semibold text-[var(--brand-secondary)]">
             Follow Us
           </h3>
@@ -56,7 +57,9 @@ function Footer() {
             Follow us on social media.
           </p>
 
-          <div className="flex gap-4 mt-5 justify-center md:justify-start">
+          <div
+          
+          className="flex gap-4 mt-5 justify-center md:justify-start">
             
             {/* Instagram */}
             <a

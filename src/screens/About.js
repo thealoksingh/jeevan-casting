@@ -78,7 +78,10 @@ function About() {
               className="text-2xl sm:text-4xl md:text-5xl text-white  px-4 mt-3 font-extrabold leading-tight text-center  "
             />
           </div>
-          <div className="max-w-3xl mx-auto">
+          <div
+           
+            className="max-w-8xl mx-auto"
+          >
             <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
               At{" "}
               <span className="font-semibold text-[var(--brand-secondary)]">

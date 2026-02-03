@@ -39,7 +39,7 @@ function HexagonGridBgContactus() {
     
       <div className="relative z-10 max-w-7xl w-full">
       
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="">
       
           <div className="rounded-xl bg-white/10 backdrop-blur-sm shadow-xl p-6 text-white hover:scale-105 transition">
             <h3 className="text-2xl font-semibold mb-2 text-white]">
@@ -54,7 +54,7 @@ function HexagonGridBgContactus() {
                 href="mailto:info@curvesandcodes.com"
                 className="hover:text-[var(--brand-accent)] transition"
               >
-                info@curvesandcodes.com
+                castingjeevan@gmail.com
               </a>
             </p>
             <div className="rounded-lg overflow-hidden shadow-md h-56">
@@ -69,34 +69,6 @@ function HexagonGridBgContactus() {
             </div>
           </div>
 
-        
-          <div className="rounded-xl bg-white/10 backdrop-blur-sm shadow-xl p-6 text-white hover:scale-105 transition">
-            <h3 className="text-2xl font-semibold mb-2 ">
-              New Delhi Office
-            </h3>
-            <p className="text-sm mb-2">
-              Chhatarpur Enclave Phase 1, Chattarpur, New Delhi 110074
-            </p>
-            <p className="text-sm mb-2">9871165827</p>
-            <p className="text-sm mb-4">
-              <a
-                href="mailto:sales@curvesandcodes.com"
-                className="hover:text-[var(--brand-accent)] transition"
-              >
-                sales@curvesandcodes.com
-              </a>
-            </p>
-            <div className="rounded-lg overflow-hidden shadow-md h-56">
-              <iframe
-                title="New Delhi Map"
-                src="https://maps.google.com/maps?q=28.5205,77.1994&z=14&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="eager"
-              ></iframe>
-            </div>
-          </div>
         </div>
       </div>
     </section>

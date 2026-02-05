@@ -133,8 +133,13 @@ function ContactUsModal({ isOpen, onClose }) {
     backdrop-blur-md
     bg-gradient-to-br from-yellow-400/10 via-[var(--brand-accent)]/5 to-transparent
   ">   <button
-          onClick={onClose}
-          className="absolute top-2 right-4 text-gray-300 hover:text-white text-lg"
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onClose();
+          }}
+          className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center text-gray-300 hover:text-[var(--brand-secondary)] hover:bg-white/10 rounded-full transition-colors duration-200 text-xl font-bold z-10"
         >
           ✕
         </button>

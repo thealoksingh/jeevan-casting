@@ -45,7 +45,7 @@ function Home() {
   ];
 
   return (
-    <div className="bg-[var(--brand-primary)] overflow-x-hidden pt-16">
+    <div className="bg-[var(--brand-primary)] overflow-x-hidden lg:pt-0">
       {/* HERO SECTION */}
       <div className="relative flex justify-center">
         {/* Background video */}
@@ -123,7 +123,7 @@ function Home() {
             {/* MEET US */}
             <div className="my-10">
               <BouncyText
-                text="Who We are??"
+                text="What We do ?"
                 className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
               />
             </div>

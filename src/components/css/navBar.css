@@ -129,10 +129,30 @@
 }
 
 .mobile-menu li {
-  padding: 0.6rem;
-  border: 0.4px solid ;
-  border-color: rgba(49, 49, 49, 0.866);
+  margin-bottom: 0.5rem;
   text-align: center;
+}
+
+.mobile-menu .nav-link {
+  display: block;
+  padding: 1rem 2rem;
+  margin: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--neutral-bg-light);
+}
+
+.mobile-menu .nav-link:hover,
+.mobile-menu .nav-link:active {
+  background: var(--brand-secondary);
+  color: var(--brand-primary);
+  transform: scale(1.02);
 }
 
 .mobile-submenu {

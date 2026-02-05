@@ -5,110 +5,116 @@ const OrbitReels = () => {
     {
       name: "Ad name 1",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://www.nykaafashion.com/style-files/wp-content/uploads/2024/06/party-dress-banner.jpg",
     },
     {
       name: "Ad name 2",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://static01.nyt.com/images/2009/03/22/arts/22chop_600.jpg?quality=75&auto=webp&disable=upscale",
     },
     {
       name: "Ad name 3",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://staticprintenglish.theprint.in/wp-content/uploads/2025/03/Bollywood-downfall-copy-696x392.jpg",
     },
     {
       name: "Ad name 4",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://s.studiobinder.com/wp-content/uploads/2020/04/What-is-Bollywood-Featured.jpg",
     },
     {
       name: "Ad name 5",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://images.moneycontrol.com/static-mcnews/2024/12/20241231124530_yearender.jpg?impolicy=website&width=770&height=431",
     },
     {
       name: "Ad name 6",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
-    },  {
+        "https://static.spotboye.com/uploads/Untitled_design_(3)_2024-11-18-7-53-35_thumbnail.jpg",
+    },
+    {
       name: "Ad name 1",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://static.toiimg.com/thumb/msid-112645954,width-1280,height-720,resizemode-4/112645954.jpg",
     },
     {
       name: "Ad name 2",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://kalingatv.com/wp-content/uploads/2025/06/Bollywood-movies-releasing-in-July.jpg",
     },
     {
       name: "Ad name 3",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt86MmFb2lK3fA7RB1ufsOfqyO4qYbUa3V5w&s",
     },
     {
       name: "Ad name 4",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://www.shutterstock.com/image-vector/bollywood-indian-cinema-movie-banner-600nw-2524335017.jpg",
     },
     {
       name: "Ad name 5",
+      image: "https://i.ytimg.com/vi/OkdpukkVjV4/sddefault.jpg",
+    },
+    {
+      name: "Ad name 3",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://hawk.live/storage/post-images/eva-elfi-made-an-appearance-at-a-major-esports-tournament-photo-10006.jpg",
     },
     {
       name: "Ad name 6",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://i.ytimg.com/vi/uv8H92S_9-Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLABwkRBR43tpo8duVJNIhf3iDm6vA",
     },
-       {
+    {
       name: "Ad name 1",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://m.media-amazon.com/images/S/pv-target-images/96e98f59328bd6f8a93f1c601489e3851527d6a055fa96b9cdad8a14d6025a89._UR1920,1080_CLs%7C1920,1080%7C/G/bundle/BottomRightCardGradient16x9.png,/G/01/digital/video/merch/subs/benefit-id/m-r/Prime/logos/channels-logo-white.png%7C0,0,1920,1080+0,0,1920,1080+1578,847,263,156_kvf21cb47db8d34aa971cd86f57a65cf8d_SX500_FMjpg_.jpg",
     },
     {
       name: "Ad name 2",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://editorial.rottentomatoes.com/wp-content/uploads/2019/07/RT_300EssentialMovies_600x314.jpg?w=600",
     },
     {
       name: "Ad name 3",
+      image:
+        "https://hawk.live/storage/post-images/eva-elfi-made-an-appearance-at-a-major-esports-tournament-photo-10006.jpg",
+    },
+    {
+      name: "Ad name 5",
       image:
         "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
     },
     {
       name: "Ad name 4",
       image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
+        "https://hawk.live/storage/post-images/eva-elfi-named-her-favorite-player-at-the-international-2025-21258.jpg",
+    },
+    {
+      name: "Ad name 5",
+      image:
+        "https://hawk.live/storage/post-images/eva-elfie-named-her-favorite-dota-2-player-and-its-no-longer-dyrachyo-21250.jpg",
     },
     {
       name: "Ad name 5",
       image:
         "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
     },
-     {
-      name: "Ad name 5",
-      image:
-        "https://images.unsplash.com/photo-1532800783378-1bed60adaf58?w=800",
-    },
-   
-  
-   
   ];
 
-  const radius = 660;
+  const radius = 560;
 
   return (
     <div
-   
       style={{
-           backgroundImage: "url('./middleCamera.png')",
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundBlendMode: "multiply",
-              backgroundColor: "#00000029", // important for multiply
-              
+        backgroundImage: "url('./middleCamera.png')",
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "multiply",
+        backgroundColor: "#00000029", // important for multiply
+
         width: "500px",
         height: "400px",
         margin: "0 auto",

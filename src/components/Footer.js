@@ -16,7 +16,7 @@ function Footer() {
             <h2 className="text-xl font-bold tracking-wide">Jeevan Casting</h2>
           </div>
 
-          <p className="text-sm text-neutral-400 leading-relaxed">
+          <p className="text-sm text-neutral-400 leading-relaxed text-justify">
             Jeevan Casting connects fresh talent with real opportunities in films,
             advertisements, web series, and television. We help aspiring artists
             step into the spotlight and support production teams with the perfect cast.
